@@ -1,0 +1,366 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/juampi92/auto-updater#readme">auto-updater (v1.0.2)</a>
+</h1>
+<h4>Automatically updates your client version when is outdated by the repository</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.auto-updater">module auto-updater</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto-updater">
+            function <span class="apidocSignatureSpan"></span>auto-updater
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater">
+            function <span class="apidocSignatureSpan">auto-updater.</span>auto_updater
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.super_">
+            function <span class="apidocSignatureSpan">auto-updater.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">auto-updater.</span>auto_updater.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">auto-updater.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.auto-updater.auto_updater">module auto-updater.auto_updater</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater.auto_updater">
+            function <span class="apidocSignatureSpan">auto-updater.</span>auto_updater
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater.super_">
+            function <span class="apidocSignatureSpan">auto-updater.auto_updater.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">auto-updater.auto_updater.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.auto-updater.auto_updater.prototype">module auto-updater.auto_updater.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater.prototype.error">
+            function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>error
+            <span class="apidocSignatureSpan">(message, code, e)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater.prototype.fire">
+            function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>fire
+            <span class="apidocSignatureSpan">(command)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-updater.auto_updater.prototype.use">
+            function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>use
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>emit</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.auto-updater" id="apidoc.module.auto-updater">module auto-updater</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto-updater" id="apidoc.element.auto-updater.auto-updater">
+        function <span class="apidocSignatureSpan"></span>auto-updater
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">auto-updater = function (config) {
+  EventEmitter.apply(this);
+
+  this.attrs = _.extend({}, AutoUpdater.defaults, config);
+  this.update_dest = 'update';
+  this.cache = {};
+  this.jsons = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater" id="apidoc.element.auto-updater.auto_updater">
+        function <span class="apidocSignatureSpan">auto-updater.</span>auto_updater
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">auto_updater = function (config) {
+  EventEmitter.apply(this);
+
+  this.attrs = _.extend({}, AutoUpdater.defaults, config);
+  this.update_dest = 'update';
+  this.cache = {};
+  this.jsons = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.super_" id="apidoc.element.auto-updater.super_">
+        function <span class="apidocSignatureSpan">auto-updater.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.auto-updater.auto_updater" id="apidoc.module.auto-updater.auto_updater">module auto-updater.auto_updater</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater.auto_updater" id="apidoc.element.auto-updater.auto_updater.auto_updater">
+        function <span class="apidocSignatureSpan">auto-updater.</span>auto_updater
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">auto_updater = function (config) {
+  EventEmitter.apply(this);
+
+  this.attrs = _.extend({}, AutoUpdater.defaults, config);
+  this.update_dest = 'update';
+  this.cache = {};
+  this.jsons = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater.super_" id="apidoc.element.auto-updater.auto_updater.super_">
+        function <span class="apidocSignatureSpan">auto-updater.auto_updater.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.auto-updater.auto_updater.prototype" id="apidoc.module.auto-updater.auto_updater.prototype">module auto-updater.auto_updater.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater.prototype.error" id="apidoc.element.auto-updater.auto_updater.prototype.error">
+        function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>error
+        <span class="apidocSignatureSpan">(message, code, e)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (message, code, e) {
+  if (this.attrs.devmode) {
+    console.error(message);
+  }
+  emit(this, 'error', code, e || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+autoupdater.on('download.progress', function(name, perc) {
+  process.stdout.write("Downloading " + perc + "% \033[0G");
+});
+autoupdater.on('download.end', function(name) {
+  console.log("Downloaded " + name);
+});
+autoupdater.on('download.error', function(err) {
+  console.<span class="apidocCodeKeywordSpan">error</span>("Error when downloading: " + err);
+});
+autoupdater.on('end', function() {
+  console.log("The app is ready to function");
+});
+autoupdater.on('error', function(name, e) {
+  console.error(name, e);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater.prototype.fire" id="apidoc.element.auto-updater.auto_updater.prototype.fire">
+        function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>fire
+        <span class="apidocSignatureSpan">(command)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fire = function (command) {
+  return commands[command].apply(this, _.toArray(arguments).slice(1));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  console.log("You have a clone of the repository. Use 'git pull' to be up-to-date");
+});
+autoupdater.on('check.up-to-date', function(v) {
+  console.info("You have the latest version: " + v);
+});
+autoupdater.on('check.out-dated', function(v_old, v) {
+  console.warn("Your version is outdated. " + v_old + " of " + v);
+  autoupdater.<span class="apidocCodeKeywordSpan">fire</span>('download-update'); // If autoupdate: false, you'll
+ have to do this manually.
+  // Maybe ask if the'd like to download the update.
+});
+autoupdater.on('update.downloaded', function() {
+  console.log("Update downloaded and ready for install");
+  autoupdater.fire('extract'); // If autoupdate: false, you'll have to do this manually.
+});
+autoupdater.on('update.not-installed', function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.auto-updater.auto_updater.prototype.use" id="apidoc.element.auto-updater.auto_updater.prototype.use">
+        function <span class="apidocSignatureSpan">auto-updater.auto_updater.prototype.</span>use
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (options) {
+  _.extend(this.attrs, options);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
